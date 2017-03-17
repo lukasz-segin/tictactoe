@@ -27,8 +27,8 @@ class ClassicTicTacToe implements TicTacToeInterface
 			if($this->_varsO[$i++] == $x && $this->_varsO[$i] == $y) throw new \Foo\FieldTakenException('Pole jest zajęte.');
 		}
 
-  	array_push($this->_varsX, $x);
-  	array_push($this->_varsX, $y);
+  	array_push($this->_varsX, [$x,$y]);
+//  	array_push($this->_varsX, $y);
 
 		/**
 		 *	WYJATEK PRZY GRANIU DWA RAZY POD RZAD
@@ -61,8 +61,8 @@ class ClassicTicTacToe implements TicTacToeInterface
 			if($this->_varsX[$i++] == $x && $this->_varsX[$i] == $y) throw new \Foo\FieldTakenException('Pole jest zajęte.');
 		}
 
-  	array_push($this->_varsO, $x);
-  	array_push($this->_varsO, $y);
+  	array_push($this->_varsO, [$x,$y]);
+//  	array_push($this->_varsO, $y);
 
 		/**
 		 *	WYJATEK PRZY GRANIU DWA RAZY POD RZAD
